@@ -1,0 +1,91 @@
+body {
+  font-family: 'Helvetica Neue', Helvetica;
+  font-size: 16px;
+  line-height: 1.55;
+  padding: 0 1em;
+}
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.1;
+  margin: 0.75em 0;
+/*
+  margin-left:      -1.00rem;
+  padding-left:      0.75rem;
+  border-left: solid 0.25rem;
+*/
+}
+code {
+  font-family: Inconsolata, Consolas, sans-serif;
+  font-size: 1.1em;
+  color: #336;
+}
+pre {
+  width: 100%;
+  overflow: scroll;
+}
+
+p, ol, ul {
+  margin: 0.5em 0;
+}
+aside {
+  color: #999;
+  font-style: italic;
+  margin-left: -1em;
+}
+.todo {
+  background: yellow;
+  color: orange;
+  padding: 0.25em;
+}
+
+/* 1.1.1-style nested list item numbering */
+ol {
+  counter-reset: section;
+  list-style-type: none;
+  
+  border-left: solid 2px;
+  padding-left: 0.5rem;
+}
+ol>li {
+  /*position: relative;*/
+}
+li ol,
+li h2,
+li h3,
+li h4,
+li h5,
+li h6 {
+  margin-left: 1rem;
+}
+ol>li:before {
+  counter-increment: section;
+  content: counters(section, ".") ". ";
+  /*position: absolute;
+  margin-right: 100%;
+  right: 0.5em; */ /* space between number and text */
+}
+/* Don't number unordered lists nested in an ordered list. */
+ul li:before {
+  content: '';
+}
+li > p:first-child {
+  display: inline;
+}
+li > p {
+  margin: 0.25em 0;
+}
+
+/*
+h1 { border-color: #03E3FC; }
+h2 { border-color: #AEFC03; }
+h3 { border-color: #D702FC; }
+h4 { border-color: #3B42A8; }
+h5 { border-color: #BF2A48; }
+h6 { border-color: #F9043D; }
+*/
+/* <http://www.colourlovers.com/palette/1205029/Distinctive_Ambush> */
+h1, ol { border-color: #3C2A57; }
+h2, ol ol { border-color: #B93097; }
+h3, ol ol ol { border-color: #85B930; }
+h4, ol ol ol ol { border-color: #C1C78F; }
+h5, ol ol ol ol ol { border-color: #E63A21; }
+h6, ol ol ol ol ol ol { border-color: #F9043D; }
